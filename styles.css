@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f4f7fb;
+  color: #1b2430;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.app-header {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #51627a;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.screen.hidden {
+  display: none;
+}
+
+.template-menu,
+.active-lists,
+.task-items {
+  display: grid;
+  gap: 16px;
+}
+
+.template-card,
+.active-list-card,
+.task-item,
+.panel {
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(27, 36, 48, 0.08);
+}
+
+.template-card,
+.active-list-card {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #d7deea;
+  text-align: left;
+  cursor: pointer;
+}
+
+.template-card:hover,
+.active-list-card:hover,
+.template-card:focus-visible,
+.active-list-card:focus-visible {
+  border-color: #5078ff;
+  outline: none;
+}
+
+.template-card h2,
+.panel h2,
+.panel h3,
+.active-list-card h3 {
+  margin-top: 0;
+}
+
+.panel {
+  padding: 24px;
+}
+
+.panel-header,
+.task-list-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.primary-button,
+.secondary-button,
+.link-button {
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 10px 16px;
+}
+
+.primary-button {
+  background: #5078ff;
+  color: #ffffff;
+}
+
+.secondary-button {
+  background: #e7eefc;
+  color: #2340a0;
+}
+
+.link-button {
+  margin-bottom: 16px;
+  padding: 0;
+  background: transparent;
+  color: #2340a0;
+}
+
+.template-items {
+  padding-left: 20px;
+}
+
+.task-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid #d7deea;
+}
+
+.task-item input {
+  width: 18px;
+  height: 18px;
+}
+
+.task-item.completed span {
+  color: #6c7a90;
+  text-decoration: line-through;
+}
+
+.muted {
+  color: #5e6f86;
+}
+
+@media (min-width: 720px) {
+  .template-menu,
+  .active-lists {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
