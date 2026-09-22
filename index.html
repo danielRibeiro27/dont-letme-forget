@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Don't Let Me Forget</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <p class="eyebrow">Don't Let Me Forget</p>
+        <h1>Task list templates</h1>
+        <p>Select a predefined task list to create a checklist or open an active one.</p>
+      </header>
+
+      <section id="template-screen" class="screen">
+        <div id="template-menu" class="template-menu" aria-label="Task list templates"></div>
+      </section>
+
+      <section id="template-detail-screen" class="screen hidden">
+        <button id="back-to-templates" class="link-button" type="button">← Back to templates</button>
+        <div id="template-detail" class="panel"></div>
+      </section>
+
+      <section id="task-list-screen" class="screen hidden">
+        <button id="back-to-template-detail" class="link-button" type="button">← Back to template</button>
+        <div id="task-list-detail" class="panel"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
